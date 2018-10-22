@@ -1,7 +1,7 @@
 # amr-quadrotor
 A repository developed base on RotroS. The original repository is extended for AMR simulation.
 ## How to install it
-- You need a **Ubuntu 16.04** and ROS** Kinetic** (http://wiki.ros.org/kinetic/Installation/Ubuntu)
+- You need a **Ubuntu 16.04** and **ROS Kinetic** (http://wiki.ros.org/kinetic/Installation/Ubuntu)
 - Follow the following instruction to install **RotorS**(https://github.com/ethz-asl/rotors_simulator)
 ```
 $ pip install future
