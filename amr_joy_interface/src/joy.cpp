@@ -48,8 +48,8 @@ Joy::Joy() {
 
   pnh.param("max_roll", max_.roll, 15.0 * M_PI / 180.0);  // [rad]
   pnh.param("max_pitch", max_.pitch, 15.0 * M_PI / 180.0);  // [rad]
-  pnh.param("max_yawrate", max_.yawrate, 180.0 * M_PI / 180.0);  // [rad/s]
-  pnh.param("max_thrust", max_.thrust, 25.0);  // [N]
+  pnh.param("max_yawrate", max_.yawrate, 90.0 * M_PI / 180.0);  // [rad/s]
+  pnh.param("max_thrust", max_.thrust, 30.0);  // [N]
 
   pnh.param("button_button0_", buttons_.button0, 3);
   pnh.param("button_button1_", buttons_.button1, 4);

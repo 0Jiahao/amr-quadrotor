@@ -17,7 +17,7 @@ $ wget http://packages.ros.org/ros.key -O - | sudo apt-key add -
 sudo apt-get update
 sudo apt-get install python-catkin-tools
 $ mkdir [your_workspace]/src
-$ cd [your_workspace]src
+$ cd [your_workspace]/src
 $ catkin_init_workspace  # initialize your catkin workspace
 $ wstool init
 $ wget https://raw.githubusercontent.com/ethz-asl/rotors_simulator/master/rotors_hil.rosinstall
@@ -42,7 +42,7 @@ $ catkin build
 ## Example
 Connect your xbox joystick with the computer, run
 ```
-$ roslaunch ~/catkin_ws/src/amr_quadrotor/launch/amr_quadrotor.launch 
+$ roslaunch [your_workspace]/src/amr_quadrotor/launch/amr_quadrotor_manual_control.launch
 ```
 You can now fly the quadrotor with your joystick.
 ## Reference
