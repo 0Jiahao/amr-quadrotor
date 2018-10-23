@@ -20,7 +20,10 @@
       <arg name="enable_ground_truth" value="true" />
       <arg name="log_file" value="iris"/>
     </include>
-    <node name="joy_node" pkg="joy" type="joy_node" />
+    <node name="joy_node" pkg="joy" type="joy_node" >
+      <param name="deadzone" value="0.5" />
+      <param name="autorepeat_rate" value="15" />
+    </node>
     <node name="amr_joy_setpoint_interface" pkg="amr_joy_setpoint_interface" type="amr_joy_setpoint_interface" />
     <node name="roll_pitch_yawrate_thrust_controller_node" pkg="rotors_control" type="roll_pitch_yawrate_thrust_controller_node" output="screen">
       <rosparam

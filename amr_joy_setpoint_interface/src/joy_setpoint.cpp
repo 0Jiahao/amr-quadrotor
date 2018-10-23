@@ -58,29 +58,29 @@ Joy_setpoint::Joy_setpoint() {
 
 void Joy_setpoint::JoyCallback(const sensor_msgs::JoyConstPtr& msg) {
   current_joy_ = *msg;
-  if(msg->axes[axes_.pt_x] * axes_.x_direction > 0.5)
+  if(msg->axes[axes_.pt_x] * axes_.x_direction > 0)
   {
     current_pt_x = (current_pt_x + 0.1 > max_.pt_x)?max_.pt_x:current_pt_x + 0.1;
   }
-  else if(msg->axes[axes_.pt_x] * axes_.x_direction < -0.5)
+  else if(msg->axes[axes_.pt_x] * axes_.x_direction < 0)
   {
     current_pt_x = (current_pt_x - 0.1 < -max_.pt_x)?-max_.pt_x:current_pt_x - 0.1;
   }
   
-  if(msg->axes[axes_.pt_y] * axes_.y_direction > 0.5)
+  if(msg->axes[axes_.pt_y] * axes_.y_direction > 0)
   {
     current_pt_y = (current_pt_y + 0.1 > max_.pt_y)?max_.pt_y:current_pt_y + 0.1;
   }
-  else if(msg->axes[axes_.pt_y] * axes_.y_direction < -0.5)
+  else if(msg->axes[axes_.pt_y] * axes_.y_direction < 0)
   {
     current_pt_y = (current_pt_y - 0.1 < -max_.pt_y)?-max_.pt_y:current_pt_y - 0.1;
   }
 
-  if(msg->axes[axes_.pt_z] * axes_.z_direction > 0.5)
+  if(msg->axes[axes_.pt_z] * axes_.z_direction > 0)
   {
     current_pt_z = (current_pt_z + 0.1 > max_.pt_z)?max_.pt_z:current_pt_z + 0.1;
   }
-  else if(msg->axes[axes_.pt_z] * axes_.z_direction < -0.5)
+  else if(msg->axes[axes_.pt_z] * axes_.z_direction < 0)
   {
     current_pt_z = (current_pt_z - 0.1 < 1.5)?1.5:current_pt_z - 0.1;
   }
