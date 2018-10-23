@@ -1,7 +1,7 @@
 # amr-quadrotor
 A repository developed base on RotroS. The original repository is extended for AMR simulation.
 ## How to install it
-- You need a **Ubuntu 16.04** and **ROS Kinetic** (http://wiki.ros.org/kinetic/Installation/Ubuntu)
+- You need a **Ubuntu 16.04** and **ROS Kinetic (desktop full)** (http://wiki.ros.org/kinetic/Installation/Ubuntu)
 - Follow the following instruction to install **RotorS**(https://github.com/ethz-asl/rotors_simulator)
 ```
 $ pip install future
@@ -39,12 +39,30 @@ Finally, we can complie them all together
 $ cd [your_workspace]
 $ catkin build
 ```
-## Example
+After installation the file the file tree should look like this
+```
+[your_workspace]/src
+├── amr_quadrotor
+├── CMakeLists.txt -> /opt/ros/kinetic/share/catkin/cmake/toplevel.cmake
+├── mav_comm
+├── mavlink
+├── mavros
+├── rotors_hil.rosinstall
+└── rotors_simulator
+```
+## Examples
+- **Manual control**
 Connect your xbox joystick with the computer, run
 ```
 $ roslaunch [your_workspace]/src/amr_quadrotor/launch/amr_quadrotor_manual_control.launch
 ```
 You can now fly the quadrotor with your joystick.
+- **Setpoint control**
+Connect your xbox joystick with the computer, run
+```
+$ roslaunch [your_workspace]/src/amr_quadrotor/launch/amr_quadrotor_setpoint_control.launch
+```
+You can now control the setpoint position (green) with your joystick. 
 ## Reference
 ```
 @Inbook{Furrer2016,
