@@ -48,7 +48,7 @@
     enable_visual="1"
     >
     <box size="0.02 0.02 0.02" />
-    <origin xyz="-0.06 0 -0.0425" rpy="0 1.57079 0"/>
+    <origin xyz="-0.06 0 -0.03" rpy="0 1.57079 0"/>
   </xacro:camera_macro>
 
   <!-- Mount an ADIS16448 IMU. -->

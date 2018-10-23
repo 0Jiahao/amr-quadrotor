@@ -46,8 +46,8 @@ Joy::Joy() {
   pnh.param("axis_direction_yawrate", axes_.yawrate_direction, 1);
   pnh.param("axis_direction_thrust", axes_.thrust_direction, 1);
 
-  pnh.param("max_roll", max_.roll, 15.0 * M_PI / 180.0);  // [rad]
-  pnh.param("max_pitch", max_.pitch, 15.0 * M_PI / 180.0);  // [rad]
+  pnh.param("max_roll", max_.roll, 5.0 * M_PI / 180.0);  // [rad]
+  pnh.param("max_pitch", max_.pitch, 5.0 * M_PI / 180.0);  // [rad]
   pnh.param("max_yawrate", max_.yawrate, 90.0 * M_PI / 180.0);  // [rad/s]
   pnh.param("max_thrust", max_.thrust, 30.0);  // [N]
 

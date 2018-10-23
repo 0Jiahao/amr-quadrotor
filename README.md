@@ -34,6 +34,10 @@ After all above is done, clone this repository to the workspace
 $ cd [your_workspace]/src
 $ git clone https://github.com/0Jiahao/amr_quadrotor.git
 ```
+And we need to add the Cyberzoo to the default path of Gazebo
+```
+$ cp -r [your_workspace]/src/amr_quadrotor/amr_description/models/* ~/.gazebo/models/
+```
 Finally, we can complie them all together
 ```
 $ cd [your_workspace]
