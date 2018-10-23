@@ -5,7 +5,7 @@
     <arg name="world_name" value="$(find rotors_gazebo)/worlds/basic.world"/>
     <!-- <arg name="debug" value="true"/> -->
     <arg name="paused" value="false"/>
-    <!-- <arg name="gui" value="false"/> -->
+    <arg name="gui" value="false"/>
   </include>
 
   <param name="robot_description"
@@ -30,5 +30,6 @@
     </node>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
     <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node type="rviz" name="rviz" pkg="rviz" args="-d $(find amr_joy_interface)/rviz/amr_quadrotor_manual_control.rviz" />
   </group>
 </launch>
