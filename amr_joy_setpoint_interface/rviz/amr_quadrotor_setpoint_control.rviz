@@ -6,8 +6,11 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /Front_Camera1
         - /Front_Camera1/Visibility1
+        - /Bottom_Camera1
         - /Bottom_Camera1/Visibility1
+        - /Setpoint1
       Splitter Ratio: 0.5
     Tree Height: 846
   - Class: rviz/Selection
@@ -60,65 +63,65 @@ Visualization Manager:
         Expand Link Details: false
         Expand Tree: false
         Link Tree Style: Links in Alphabetic Order
-        iris/base_link:
+        ardrone/base_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        iris/base_link_inertia:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-          Value: true
-        iris/camera_bottom_link:
+        ardrone/base_link_inertia:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        iris/camera_bottom_optical_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        iris/camera_front_link:
+        ardrone/camera_bottom_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        iris/camera_front_optical_link:
+        ardrone/camera_bottom_optical_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
-        iris/imu_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        iris/imugt_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        iris/odometry_sensor1_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        iris/odometry_sensorgt_link:
-          Alpha: 1
-          Show Axes: false
-          Show Trail: false
-        iris/rotor_0:
+        ardrone/camera_front_link:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        iris/rotor_1:
+        ardrone/camera_front_optical_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ardrone/imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ardrone/imugt_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ardrone/odometry_sensor1_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ardrone/odometry_sensorgt_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        ardrone/rotor_0:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        iris/rotor_2:
+        ardrone/rotor_1:
           Alpha: 1
           Show Axes: false
           Show Trail: false
           Value: true
-        iris/rotor_3:
+        ardrone/rotor_2:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        ardrone/rotor_3:
           Alpha: 1
           Show Axes: false
           Show Trail: false
@@ -132,7 +135,7 @@ Visualization Manager:
     - Class: rviz/Camera
       Enabled: true
       Image Rendering: background and overlay
-      Image Topic: /iris/camera_front/image_raw
+      Image Topic: /ardrone/camera_front/image_raw
       Name: Front_Camera
       Overlay Alpha: 0.5
       Queue Size: 2
@@ -149,7 +152,7 @@ Visualization Manager:
     - Class: rviz/Camera
       Enabled: true
       Image Rendering: background and overlay
-      Image Topic: /iris/camera_bottom/image_raw
+      Image Topic: /ardrone/camera_bottom/image_raw
       Name: Bottom_Camera
       Overlay Alpha: 0.5
       Queue Size: 2
@@ -170,7 +173,7 @@ Visualization Manager:
       History Length: 1
       Name: Setpoint
       Radius: 0.200000003
-      Topic: /iris/joy_setpoint
+      Topic: /ardrone/joy_setpoint
       Unreliable: false
       Value: true
   Enabled: true
@@ -198,25 +201,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 18.6435299
+      Distance: 41.3664169
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0
-        Y: 0
-        Z: 0
+        X: 6.82192183
+        Y: 2.41922617
+        Z: -0.491651088
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 0.480398297
+      Pitch: 1.13479674
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 5.08858252
+      Yaw: 3.44857788
     Saved: ~
 Window Geometry:
   Bottom_Camera:

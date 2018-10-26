@@ -9,23 +9,23 @@
   </include>
 
   <param name="robot_description"
-    command="$(find xacro)/xacro.py '$(find amr_description)/iris.xacro'"
+    command="$(find xacro)/xacro.py '$(find amr_description)/ardrone.xacro'"
   />
 
-  <group ns="iris">
+  <group ns="ardrone">
     <include file="$(find rotors_gazebo)/launch/spawn_mav.launch">
-      <arg name="mav_name" value="iris" />
+      <arg name="mav_name" value="ardrone" />
       <arg name="model" value="$(find amr_description)/mav_generic_odometry_sensor.gazebo" />
       <arg name="enable_logging" value="true" />
       <arg name="enable_ground_truth" value="true" />
-      <arg name="log_file" value="iris"/>
+      <arg name="log_file" value="ardrone"/>
     </include>
     <node name="joy_node" pkg="joy" type="joy_node" />
     <node name="amr_joy_interface" pkg="amr_joy_interface" type="amr_joy_interface" />
     <node name="roll_pitch_yawrate_thrust_controller_node" pkg="rotors_control" type="roll_pitch_yawrate_thrust_controller_node" output="screen">
       <rosparam
-        command="load" file="$(find rotors_gazebo)/resource/roll_pitch_yawrate_thrust_controller_iris.yaml" />
-      <rosparam command="load" file="$(find rotors_gazebo)/resource/iris.yaml" />
+        command="load" file="$(find amr_description)/roll_pitch_yawrate_thrust_controller_ardrone.yaml" />
+      <rosparam command="load" file="$(find amr_description)/ardrone.yaml" />
       <remap from="odometry" to="odometry_sensor1/odometry" />
     </node>
     <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />

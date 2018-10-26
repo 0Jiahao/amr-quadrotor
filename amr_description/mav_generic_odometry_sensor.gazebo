@@ -19,22 +19,22 @@
   limitations under the License.
 -->
 
-<robot name="iris" xmlns:xacro="http://ros.org/wiki/xacro">
+<robot name="ardrone" xmlns:xacro="http://ros.org/wiki/xacro">
   <!-- Instantiate the mav-->
-  <xacro:include filename="$(find amr_description)/iris_base.xacro" />
+  <xacro:include filename="$(find amr_description)/ardrone_base.xacro" />
 
   <!-- Mount a generic odometry sensor without odometry map (working everywhere). -->
   <xacro:odometry_plugin_macro
-    namespace="iris"
+    namespace="ardrone"
     odometry_sensor_suffix="1"
-    parent_link="iris/base_link"
+    parent_link="ardrone/base_link"
     pose_topic="odometry_sensor1/pose"
     pose_with_covariance_topic="odometry_sensor1/pose_with_covariance"
     position_topic="odometry_sensor1/position"
     transform_topic="odometry_sensor1/transform"
     odometry_topic="odometry_sensor1/odometry"
     parent_frame_id="world"
-    child_frame_id="iris/odometry_sensor1"
+    child_frame_id="ardrone/odometry_sensor1"
     mass_odometry_sensor="0.00001"
     measurement_divisor="1"
     measurement_delay="0"
